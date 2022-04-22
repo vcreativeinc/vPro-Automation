@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="4" total="8" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="119355" started-at="2022-04-21T16:10:21 EDT" finished-at="2022-04-21T16:12:20 EDT">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="119355" started-at="2022-04-21T16:10:21 EDT" finished-at="2022-04-21T16:12:20 EDT">
+      <class name="vPro.GhostingTest">
+        <test-method status="PASS" signature="ghosting()[pri:0, instance:vPro.GhostingTest@23fe1d71]" name="ghosting" duration-ms="24925" started-at="2022-04-21T16:11:55 EDT" finished-at="2022-04-21T16:12:20 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ghosting -->
+      </class> <!-- vPro.GhostingTest -->
+      <class name="vPro.LoginValidationTest">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:vPro.LoginValidationTest@33723e30]" name="launchBrowser" is-config="true" duration-ms="24217" started-at="2022-04-21T16:10:21 EDT" finished-at="2022-04-21T16:10:45 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="loginValidation()[pri:0, instance:vPro.LoginValidationTest@33723e30]" name="loginValidation" duration-ms="4372" started-at="2022-04-21T16:10:45 EDT" finished-at="2022-04-21T16:10:50 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidation -->
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:vPro.LoginValidationTest@33723e30]" name="terminateBrowser" is-config="true" duration-ms="131" started-at="2022-04-21T16:12:20 EDT" finished-at="2022-04-21T16:12:20 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateBrowser -->
+      </class> <!-- vPro.LoginValidationTest -->
+      <class name="vPro.SmokeTest">
+        <test-method status="PASS" signature="login()[pri:0, instance:vPro.SmokeTest@74a10858]" name="login" duration-ms="10728" started-at="2022-04-21T16:10:50 EDT" finished-at="2022-04-21T16:11:00 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="newRequest()[pri:0, instance:vPro.SmokeTest@74a10858]" name="newRequest" duration-ms="54909" started-at="2022-04-21T16:11:00 EDT" finished-at="2022-04-21T16:11:55 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newRequest -->
+      </class> <!-- vPro.SmokeTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
