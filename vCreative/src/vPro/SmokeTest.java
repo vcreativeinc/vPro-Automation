@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -15,7 +16,7 @@ public class SmokeTest extends BaseTest {
 	public void login() throws InterruptedException
 	{	
 		// Logging in with sales executive credentials
-		WebDriverWait d = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait d = new WebDriverWait(driver, Duration.ofSeconds(30));
 		d.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("username")));
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys("imail-test+DemoSalesExec@vcreativeinc.com");		
@@ -34,13 +35,13 @@ public class SmokeTest extends BaseTest {
 	@Test
 	public void newRequest() throws InterruptedException
 	{
-		WebDriverWait d = new WebDriverWait(driver, Duration.ofSeconds(10));
-		d.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'New Request')]")));
-		driver.findElement(By.xpath("//span[contains(text(),'New Request')]")).click();
+		WebDriverWait d = new WebDriverWait(driver, Duration.ofSeconds(30));
+		d.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='New Request']")));
+		driver.findElement(By.xpath("//span[normalize-space()='New Request']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//span[contains(text(),'Select an Ad Type')]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//span[contains(text(),'TV Ad (Open submit)')]")).click();
+		driver.findElement(By.xpath("//li[@aria-label='TV Ad (Open submit)']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@id='client_id']")).sendKeys("duff");
 		Thread.sleep(4000);
@@ -51,7 +52,6 @@ public class SmokeTest extends BaseTest {
 		driver.findElement(By.xpath("//span[contains(text(),'Select Status')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//li[@aria-label='Needs Producing']")).click();
-//		driver.findElement(By.xpath("//body/app-root[1]/app-root[1]/div[1]/app-quickorders[1]/div[1]/vsidebar[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/vforms[1]/div[1]/form[1]/div[5]/div[1]/div[11]/div[1]/div[1]/vfield[1]/div[1]/div[1]/p-dropdown[1]/div[1]/div[4]/div[2]/ul[1]/p-dropdownitem[7]/li[1]")).click();
 		Thread.sleep(2000);		
 		driver.findElement(By.name("card_rotationpercent")).click();
 		driver.findElement(By.name("card_rotationpercent")).sendKeys("100");
