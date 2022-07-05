@@ -5,7 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -29,7 +29,7 @@ public class SmokeTest extends BaseTest {
 		System.out.println("Logged in as: " + user);
 		String expected = "Demo Sales Executive";
 		Assert.assertEquals(expected, user);
-		Thread.sleep(4000);
+		Thread.sleep(9000);
 	}
 	
 	@Test
@@ -69,7 +69,7 @@ public class SmokeTest extends BaseTest {
 		// Client Billing Status
 		driver.findElement(By.xpath("//*[@id=\"layoutWrapper\"]/app-quickorders/div/vsidebar/div/div/div[2]/div[2]/div[3]/div[1]/div/vforms/div/form/div[5]/div/div[28]/div/div/vfield/div/div/p-dropdown/div/div[2]/span")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//span[contains(text(),'Approved Credit')]")).click();
+		driver.findElement(By.xpath("//li[@aria-label='Approved Credit']")).click();
 		Thread.sleep(2000);
 		
 		// Lengths

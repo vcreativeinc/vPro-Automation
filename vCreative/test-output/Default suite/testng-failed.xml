@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vPro.GhostingTest">
+      <class name="vPro.SendEmailSpotListViewTest">
         <methods>
+          <include name="sendEmail"/>
           <include name="terminateBrowser"/>
-          <include name="ghosting"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- vPro.GhostingTest -->
+      </class> <!-- vPro.SendEmailSpotListViewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

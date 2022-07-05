@@ -6,7 +6,10 @@
 		<class name="vPro.LoginValidationTest"/>
     	<class name="vPro.SmokeTest"/>
     	<class name="vPro.GhostingTest"/>
-
+		<class name="vPro.SearchTest"/>
+		<class name="vPro.CompactCalendarViewTest"/>
+		<class name="vPro.SendEmailSpotListViewTest"/>
+		
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -37,6 +37,7 @@ public class GhostingTest extends BaseTest {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[contains(text(),'12425->Chris Adams (Jackson Telecasters LLC)')]")).click();
 		Thread.sleep(8000);
+		d.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//span[@class='user-text']")));
 		String ghost = driver.findElement(By.xpath("//span[@class='user-text']")).getText();
 		System.out.println("Ghosted in as: " + ghost);
 		String expectedghost = "Chris Adams";
@@ -53,5 +54,12 @@ public class GhostingTest extends BaseTest {
 		// WSIL - Matt Linsin
 		
 		System.out.println("PASS Ghosting Test");
+		
+		// Log out
+		d.until(ExpectedConditions.elementToBeClickable(By.xpath("//app-header/div[1]/div[2]/div[4]/span[1]/span[1]/span[2]")));
+		driver.findElement(By.xpath("//app-header/div[1]/div[2]/div[4]/span[1]/span[1]/span[2]")).click();
+		Thread.sleep(2000);
+		d.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Logout')]")));
+		driver.findElement(By.xpath("//span[contains(text(),'Logout')]")).click();
 	}
 }

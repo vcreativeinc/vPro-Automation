@@ -25,7 +25,7 @@ public class LoginValidationTest extends BaseTest {
 		
 		d.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@role='alert'][normalize-space()='Invalid credentials']")));
 		String error = driver.findElement(By.xpath("//div[@role='alert'][normalize-space()='Invalid credentials']")).getText();
-		System.out.println("PASS " + error);
+		System.out.println("PASS " + error + " Test");
 		String expected = "Invalid credentials";
 		Assert.assertEquals(expected, error);
 
